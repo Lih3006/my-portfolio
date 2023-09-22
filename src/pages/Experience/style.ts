@@ -1,24 +1,22 @@
 import styled from 'styled-components';
 
-export const StyledProjectListContainer = styled.ul`
-  .container--project-list-title {
-    font-size: 1.12rem;
+export const StyledExperienceContainer = styled.section`
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 1.5rem;
+
+  .container--experience-title {
+    font-size: 1rem;
     font-family: 'Lexend';
     font-weight: 500;
     font-style: normal;
     text-decoration: none;
     text-transform: none;
     color: rgba(226, 232, 240, 1);
-    margin-top: 3rem;
-
-    a {
-      padding-left: 0.5rem;
-      color: white;
-      font-size: 0.725rem;
-    }
+    margin-top: 1rem;
   }
 
-  .container--project-subtitle {
+  .container--experience-subtitle {
     font-size: 1rem;
     font-family: 'Lexend';
     font-weight: 500;
@@ -28,7 +26,7 @@ export const StyledProjectListContainer = styled.ul`
     color: rgba(99, 119, 149, 1);
     margin-top: 3rem;
   }
-  .container--project-details {
+  .container--experience-details {
     font-size: 0.825rem;
     font-family: 'Lexend';
     font-weight: 500;
@@ -38,7 +36,7 @@ export const StyledProjectListContainer = styled.ul`
     color: rgba(99, 119, 149, 1);
     margin-top: 1rem;
   }
-  .container--project-text {
+  .container--experience-text {
     font-size: 0.9rem;
     font-family: 'Montserrat';
     font-weight: 500;
@@ -48,21 +46,24 @@ export const StyledProjectListContainer = styled.ul`
     text-decoration: none;
     text-transform: none;
     color: rgba(148, 163, 184, 1);
-    margin: 1rem 0;
+    margin-top: 1rem;
   }
-  .container--project-list-tags {
-    display: flex;
-    flex-wrap: wrap;
+  nav {
+    display: none;
   }
 
-  .container--project-links {
+  .container--header-media {
     display: flex;
-    gap: 2rem;
-    justify-content: flex-start;
-    margin: 0.5rem 0;
-    font-size: 0.825rem;
-    font-family: 'Lexend';
-    font-weight: 500;
+    gap: 1rem;
+    margin-top: 2rem;
+    a {
+      color: rgba(148, 163, 184, 1);
+      cursor: pointer;
+
+      i {
+        font-size: 1.5rem;
+      }
+    }
   }
 `;
 

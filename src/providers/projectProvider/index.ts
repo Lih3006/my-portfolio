@@ -5,4 +5,9 @@ export interface IProject {
   description: string;
   languages: string[];
   created_at: string;
+  homepage: string;
+}
+
+export interface ITag {
+  tec: string;
 }

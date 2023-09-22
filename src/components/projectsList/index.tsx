@@ -2,6 +2,8 @@ import { userData } from '../../utils/userData';
 import { api } from '../../services/api';
 import { useState, useEffect } from 'react';
 import { IProject } from '../../providers/projectProvider';
+import { StyledProjectListContainer } from './style';
+import Tag from '../Tags';
 
 const ProjectList = () => {
   const [repoList, setRepoList] = useState<IProject[]>([]);
@@ -30,24 +32,28 @@ const ProjectList = () => {
   }, []);
 
   return (
-    <>
-      <ul>
-        {repoList.map((project: IProject, index: number) => (
-          <li key={project.id}>
-            <h2>{project.name}</h2>
-            <p>{project.created_at}</p>
-            <p>{project.description}</p>
-            <a href={`${project.html_url}`}>Repo</a>
-            <div>
-              {languageList[index] &&
-                languageList[index].map((tec: string) => (
-                  <button key={tec}>{tec}</button>
-                ))}
-            </div>
-          </li>
-        ))}
-      </ul>
-    </>
+    <StyledProjectListContainer>
+      {repoList.map((project: IProject, index: number) => (
+        <li key={project.id}>
+          <h2 className='container--project-list-title'>{project.name}</h2>
+          <p className='container--project-text'>{project.description}</p>
+          <div className='container--project-links'>
+            <a target='_blank' href={`${project.html_url}`}>
+              <i className='fa-brands fa-github'></i> git repository
+            </a>
+            <a href={project.homepage} target='_blank'>
+              <i className='fa-solid fa-arrow-up-right-from-square'></i> webpage
+            </a>
+          </div>
+          <div className='container--project-list-tags'>
+            {languageList[index] &&
+              languageList[index].map((tec: string, index: number) => (
+                <Tag key={tec + index} tec={tec}></Tag>
+              ))}
+          </div>
+        </li>
+      ))}
+    </StyledProjectListContainer>
   );
 };
 

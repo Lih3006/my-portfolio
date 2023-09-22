@@ -1,56 +1,82 @@
-/* import imgHTML from '../public/static/img/stack/html.svg';
-import imgCSS from '../public/static/img/stack/css.svg';
-import imgJS from '../public/static/img/stack/js.svg';
-import imgNode from '../public/static/img/stack/node.svg';
-import imgStyled from '../public/static/img/stack/styled.svg';
-import imgReact from '../public/static/img/stack/react.svg';
-import { FaVuejs } from 'react-icons/fa';
-import { SiTypescript } from 'react-icons/si';
-import { FaDocker } from 'react-icons/fa';
- */
+import { FaHtml5, FaReact, FaPython, FaDocker } from 'react-icons/fa';
+import {
+  SiJavascript,
+  SiCss3,
+  SiNextdotjs,
+  SiNestjs,
+  SiStyledcomponents,
+  SiSass,
+  SiMongodb,
+  SiTypescript,
+  SiSwagger,
+} from 'react-icons/si';
+
+import { DiNodejs, DiDjango } from 'react-icons/di';
+import { BiLogoPostgresql } from 'react-icons/bi';
+
 export const stackData = [
   {
     title: 'HTML',
-    img: 'imgHTML',
+    reactIcon: FaHtml5,
   },
   {
     title: 'CSS',
-    img: 'imgCSS',
+    reactIcon: SiCss3,
   },
   {
     title: 'JS',
-    img: 'imgJS',
+    reactIcon: SiJavascript,
+  },
+  {
+    title: 'Typescript',
+    reactIcon: SiTypescript,
   },
   {
     title: 'Node JS',
-    img: 'imgNode',
+    reactIcon: DiNodejs,
+  },
+  {
+    title: 'Nest JS',
+    reactIcon: SiNestjs,
+  },
+  {
+    title: 'Next JS',
+    reactIcon: SiNextdotjs,
+  },
+  {
+    title: 'Sass',
+    reactIcon: SiSass,
   },
   {
     title: 'Styled Components',
-    img: 'imgStyled',
+    reactIcon: SiStyledcomponents,
   },
   {
     title: 'React',
-    img: 'imgReact',
-  },
-  {
-    title: 'TypeScript',
-    img: 'SiTypescript',
+    reactIcon: FaReact,
   },
   {
     title: 'Docker',
-    img: 'FaDocker',
+    reactIcon: FaDocker,
   },
   {
     title: 'Python',
-    img: 'FaDocker',
+    reactIcon: FaPython,
   },
   {
     title: 'Django',
-    img: 'FaDocker',
+    reactIcon: DiDjango,
   },
   {
-    title: 'SQL',
-    img: 'FaDocker',
+    title: 'Postgresql',
+    reactIcon: BiLogoPostgresql,
+  },
+  {
+    title: 'Mongo db',
+    reactIcon: SiMongodb,
+  },
+  {
+    title: 'Swagger',
+    reactIcon: SiSwagger,
   },
 ];

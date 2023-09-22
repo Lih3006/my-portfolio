@@ -1,9 +1,14 @@
-import React from 'react'
+import { StyledBackground } from './style';
 
-const Background = () => {
+import { Star } from './Stars';
+
+const Background = ({ children }) => {
   return (
-    <div>Background</div>
-  )
-}
+    <StyledBackground>
+      <Star />
+      {children}
+    </StyledBackground>
+  );
+};
 
-export default Background
+export default Background;
