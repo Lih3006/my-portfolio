@@ -1,5 +1,4 @@
 import { StyledBackground } from './style';
-
 import { Star } from './Stars';
 
 const Background = ({ children }) => {

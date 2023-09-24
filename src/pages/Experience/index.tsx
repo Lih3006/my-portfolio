@@ -2,10 +2,8 @@ import { userExperience } from '../../utils/userExperience';
 import { StyledExperienceContainer } from './style';
 
 const Experience = () => {
-  /*  useEffect(() => {}); */
-
   return (
-    <StyledExperienceContainer>
+    <StyledExperienceContainer id='#experience'>
       <h2 className='container--about container--experience-title'>
         EXPERIENCE
       </h2>

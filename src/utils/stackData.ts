@@ -1,4 +1,4 @@
-import { FaHtml5, FaReact, FaPython, FaDocker } from 'react-icons/fa';
+import { FaReact, FaPython, FaDocker } from 'react-icons/fa';
 import {
   SiJavascript,
   SiCss3,
@@ -9,6 +9,7 @@ import {
   SiMongodb,
   SiTypescript,
   SiSwagger,
+  SiHtml5,
 } from 'react-icons/si';
 
 import { DiNodejs, DiDjango } from 'react-icons/di';
@@ -17,7 +18,7 @@ import { BiLogoPostgresql } from 'react-icons/bi';
 export const stackData = [
   {
     title: 'HTML',
-    reactIcon: FaHtml5,
+    reactIcon: SiHtml5,
   },
   {
     title: 'CSS',

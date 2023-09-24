@@ -41,9 +41,12 @@ const ProjectList = () => {
             <a target='_blank' href={`${project.html_url}`}>
               <i className='fa-brands fa-github'></i> git repository
             </a>
-            <a href={project.homepage} target='_blank'>
-              <i className='fa-solid fa-arrow-up-right-from-square'></i> webpage
-            </a>
+            {project.homepage && (
+              <a href={project.homepage} target='_blank'>
+                <i className='fa-solid fa-arrow-up-right-from-square'></i>{' '}
+                webpage
+              </a>
+            )}
           </div>
           <div className='container--project-list-tags'>
             {languageList[index] &&

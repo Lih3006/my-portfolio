@@ -2,7 +2,7 @@ import { StyledHelloCompoment } from './style';
 
 const HelloComponent = () => {
   const url = window.location.href;
-  const urlPart = url.split('#');
+  const urlPart = url.split('!');
   const name = urlPart[urlPart.length - 1];
 
   return (
@@ -12,7 +12,7 @@ const HelloComponent = () => {
         <ul className='container--content-list'>
           <li className='container--content-list-item'>world ! </li>
           <li className='container--content-list-name'>
-            {urlPart.length === 1 ? 'Team' : name} !
+            {urlPart.length === 1 || name.length > 15 ? 'Team' : name} !
           </li>
           <li className='container--content-list-item'>users ! </li>
           <li className='container--content-list-item'>everybody!</li>

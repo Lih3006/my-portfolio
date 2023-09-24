@@ -2,26 +2,30 @@ import { StyledAboutContainer } from './style';
 
 const About = () => {
   return (
-    <StyledAboutContainer>
+    <StyledAboutContainer id='#about'>
       <div className='container--about'>
         <h2 className='container--about container--about-title'>ABOUT</h2>
         <p className='container--about container--about-text'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos laborum
-          ea cumque magnam mollitia, ipsam ut, doloribus molestias autem
-          dolores, iusto ad corrupti accusantium rerum praesentium! Nostrum
-          autem provident dignissimos.
+          Over the past year, I made the decision to transition from engineering
+          to programming, and this choice has proven to be the best one of my
+          life. Combining my passion for solving complex problems with the
+          independence to implement solutions through programming has been
+          rewarding.
         </p>
         <p className='container--about container--about-text'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
-          libero tenetur vero repellendus, temporibus odio error exercitationem
-          perspiciatis quae quia? Officia iure commodi reiciendis, voluptatum
-          nobis sit laborum vero. Autem.
+          Currently, my focus is on web development, where I highly value
+          teamwork because I believe that "alone we go faster, but together we
+          go further." I am committed to exploring everything from creating
+          enhanced interfaces to developing APIs and managing databases. My
+          journey has been fascinating, and I am eager to deepen my knowledge in
+          this constantly evolving field.
         </p>
         <p className='container--about container--about-text'>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero ratione
-          nostrum labore quisquam cumque voluptatem, perferendis consectetur
-          totam sequi architecto autem esse ea ipsa maiores distinctio
-          recusandae numquam iusto excepturi?
+          In my free time, I enjoy taking morning walks in the park, where
+          nature inspires and balances me. I play with my dogs, and I like to
+          visit thermal baths and lakes with my husband, enjoying tranquility
+          and well-being together. These activities enrich my life,
+          complementing my exciting journey in the world of programming.
         </p>
       </div>
     </StyledAboutContainer>

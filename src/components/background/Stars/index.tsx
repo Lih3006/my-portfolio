@@ -152,7 +152,7 @@ export const Star: React.FC = () => {
     setStars(teste);
   };
 
-  const drawUniverse = (universe) => {
+  const drawUniverse = (universe: CanvasRenderingContext2D) => {
     universe.clearRect(0, 0, width, height);
     const starsLength = stars.length;
 
@@ -173,7 +173,7 @@ export const Star: React.FC = () => {
     setWidth(newWidth);
     setHeight(newHeight);
     const newStarCount = newWidth * starDensity;
-    starCount = newStarCount; // Atu
+    starCount = newStarCount;
   };
   useEffect(() => {
     windowResizeHandler();

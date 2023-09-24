@@ -1,11 +1,11 @@
 export default interface IStar {
   giant: boolean;
   comet: boolean;
-  x: number; //coordenada inical
-  y: number; // coordenada inicial
-  r: number; // raio
-  dx: number; //velocidade horizontal
-  dy: number; // velocidade vertical
+  x: number;
+  y: number;
+  r: number;
+  dx: number;
+  dy: number;
   fadingOut: boolean | null;
   fadingIn: boolean;
   opacity: number;

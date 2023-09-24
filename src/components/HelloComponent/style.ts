@@ -1,11 +1,12 @@
 import styled from 'styled-components';
 
 export const StyledHelloCompoment = styled.div`
-  font-family: 'Lexend';
-  font-weight: 600;
-  font-size: 1.5rem;
   margin: 7rem 0;
-
+  .container--content-text-fixed {
+    font-family: 'Lexend';
+    font-weight: 500;
+    font-size: 1.6rem;
+  }
   .container--content {
     height: 2.5rem;
     display: flex;
@@ -16,6 +17,9 @@ export const StyledHelloCompoment = styled.div`
     overflow: hidden;
 
     .container--content-list {
+      font-family: 'Lexend';
+      font-weight: 500;
+      font-size: 1.6rem;
       display: flex;
       flex-direction: column;
       height: auto;
@@ -207,6 +211,27 @@ export const StyledHelloCompoment = styled.div`
     83.3%,
     95.96% {
       transform: translate3d(0, -25%, 0);
+    }
+  }
+
+  @media (min-width: 912px) {
+    .container--content-text-fixed {
+      font-size: 3rem;
+    }
+    .container--content {
+      height: 80.2px;
+
+      .container--content-list {
+        width: auto;
+        max-width: 500px;
+        font-size: 3rem;
+      }
+
+      &:after,
+      &:before {
+        color: #ff6f9f;
+        font-size: 4rem;
+      }
     }
   }
 `;

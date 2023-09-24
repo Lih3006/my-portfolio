@@ -4,10 +4,11 @@ export const GlobalStyles = createGlobalStyle`
 
 body{
 	margin: 0 auto;
+	bottom: 0;
+	top: 0;
 	width: 100vw;
-	height: 100vh;
-	overflow-x: hidden;
-    color: transparent; //! alterar para branco
+	height: 100vh;	
+   background-color: black;
     
 }
 
