@@ -139,17 +139,22 @@ export const Star: React.FC = () => {
   };
 
   const createUniverse = () => {
-    const teste: IStar[] = [];
+    const StarArray: IStar[] = [];
     const canvas = canvasRef.current;
-    const universe = canvas.getContext('2d');
-    for (let i = 0; i < starCount; i++) {
-      stars[i] = createStar();
-      stars[i].reset();
-      teste.push(stars[i]);
+    if (canvas == null) {
+      return;
+    } else {
+      const universe = canvas.getContext('2d');
+      for (let i = 0; i < starCount; i++) {
+        stars[i] = createStar();
+        stars[i].reset();
+        StarArray.push(stars[i]);
+      }
+      if (universe) {
+        drawUniverse(universe);
+        setStars(StarArray);
+      }
     }
-
-    drawUniverse(universe);
-    setStars(teste);
   };
 
   const drawUniverse = (universe: CanvasRenderingContext2D) => {

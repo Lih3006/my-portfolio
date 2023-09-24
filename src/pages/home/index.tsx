@@ -2,8 +2,9 @@ import { userData } from '../../utils/userData';
 import { api } from '../../services/api';
 import { StyledHomeContainer } from './style';
 import { useEffect, useState } from 'react';
+import { IUserProfile } from '../../providers/projectProvider';
 const Home = () => {
-  const [userProfile, setUserProfile] = useState({});
+  const [userProfile, setUserProfile] = useState<IUserProfile>();
   useEffect(() => {
     const getUser = async () => {
       const user = await api.get(`/users/${userData.githubUser}`);
@@ -12,15 +13,16 @@ const Home = () => {
     getUser();
   }, []);
 
-  const handleClick = (e) => {
+  const handleClick = (e: React.ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();
-    const anchorTarget = document.getElementById(
-      e.currentTarget.getAttribute('href')
-    );
-    anchorTarget?.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-    });
+    const pageId = e.currentTarget.getAttribute('href');
+    if (pageId) {
+      const anchorTarget = document.getElementById(pageId);
+      anchorTarget?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
   };
   return (
     <StyledHomeContainer>
@@ -30,7 +32,7 @@ const Home = () => {
           <span className='container--header container--header-hover'>
             <img
               className='container--header container--header-image'
-              src={userProfile.avatar_url}
+              src={userProfile?.avatar_url}
               alt='profile_img'
             />
             &nbsp; Aline Mendonca
@@ -45,15 +47,15 @@ const Home = () => {
           everyone.
         </p>
         <nav>
-          <a href='#about' onClick={handleClick}>
+          <a href='#about' onClick={() => handleClick}>
             <span className='nav-indicator-hover'>-----</span>
             <span className='nav-indicator-text'>ABOUT</span>
           </a>
-          <a href='#projects' onClick={handleClick}>
+          <a href='#projects' onClick={() => handleClick}>
             <span className='nav-indicator-hover'>-----</span>
             <span className='nav-indicator-text'>PROJECTS</span>
           </a>
-          <a href='#experience' onClick={handleClick}>
+          <a href='#experience' onClick={() => handleClick}>
             <span className='nav-indicator-hover'>-----</span>
             <span className='nav-indicator-text'>EXPERIENCE</span>
           </a>

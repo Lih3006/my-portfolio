@@ -11,3 +11,7 @@ export interface IProject {
 export interface ITag {
   tec: string;
 }
+
+export interface IUserProfile {
+  avatar_url: string;
+}
