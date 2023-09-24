@@ -5,10 +5,10 @@ export const StyledHelloCompoment = styled.div`
   .container--content-text-fixed {
     font-family: 'Lexend';
     font-weight: 500;
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
   .container--content {
-    height: 2.5rem;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: baseline;
@@ -19,7 +19,7 @@ export const StyledHelloCompoment = styled.div`
     .container--content-list {
       font-family: 'Lexend';
       font-weight: 500;
-      font-size: 1.6rem;
+      font-size: 2rem;
       display: flex;
       flex-direction: column;
       height: auto;
@@ -34,11 +34,11 @@ export const StyledHelloCompoment = styled.div`
       animation-iteration-count: infinite;
     }
     .container--content-list-name {
-      padding-bottom: 1rem;
+      padding-bottom: 1.5rem;
       color: #ff6f9f;
     }
     .container--content-list-item {
-      padding-bottom: 1rem;
+      padding-bottom: 1.5rem;
     }
     &:before {
       content: '[';
@@ -53,7 +53,7 @@ export const StyledHelloCompoment = styled.div`
     &:after,
     &:before {
       color: #ff6f9f;
-      font-size: 2rem;
+      font-size: 2.8rem;
       -webkit-animation-name: opacity;
       -webkit-animation-duration: 2s;
       -webkit-animation-iteration-count: infinite;

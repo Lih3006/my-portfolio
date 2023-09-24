@@ -8,8 +8,9 @@ export const StyledScrollPages = styled.section`
     line-height: 20px;
     letter-spacing: -0.02em;
     color: rgba(148, 163, 184, 1);
-    margin: 1.5rem;
-    width: 420px;
+
+    max-width: 85%;
+    margin: 3rem 1.5rem;
   }
   @media (min-width: 912px) {
     display: flex;
@@ -18,6 +19,10 @@ export const StyledScrollPages = styled.section`
     max-width: 1250px;
     margin: 0 auto;
     overflow: visible;
+    .container--content-techs {
+      max-width: 420px;
+      margin: 1.5rem;
+    }
 
     .container--principal-content {
       margin-top: -802px;

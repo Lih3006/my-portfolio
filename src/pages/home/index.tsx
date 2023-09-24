@@ -13,7 +13,7 @@ const Home = () => {
     getUser();
   }, []);
 
-  const handleClick = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     e.preventDefault();
     const pageId = e.currentTarget.getAttribute('href');
     if (pageId) {
@@ -35,7 +35,7 @@ const Home = () => {
               src={userProfile?.avatar_url}
               alt='profile_img'
             />
-            &nbsp; Aline Mendonca
+            &nbsp; Aline Mendonça
           </span>
         </h1>
         <h2 className='container--header container--header-subtitle'>
@@ -47,15 +47,15 @@ const Home = () => {
           everyone.
         </p>
         <nav>
-          <a href='#about' onClick={() => handleClick}>
+          <a href='#about' onClick={handleClick}>
             <span className='nav-indicator-hover'>-----</span>
             <span className='nav-indicator-text'>ABOUT</span>
           </a>
-          <a href='#projects' onClick={() => handleClick}>
+          <a href='#projects' onClick={handleClick}>
             <span className='nav-indicator-hover'>-----</span>
             <span className='nav-indicator-text'>PROJECTS</span>
           </a>
-          <a href='#experience' onClick={() => handleClick}>
+          <a href='#experience' onClick={handleClick}>
             <span className='nav-indicator-hover'>-----</span>
             <span className='nav-indicator-text'>EXPERIENCE</span>
           </a>
