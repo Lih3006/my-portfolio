@@ -14,23 +14,40 @@ export const StyledStartContainer = styled.section`
     margin-left: 1.5rem;
   }
 
-  .container--techs-list {
+  .container--techs-scroll {
+    overflow: hidden;
+    white-space: nowrap;
     display: flex;
-    justify-content: space-between;
-    gap: 2rem;
-    overflow: visible;
-    align-items: end;
-    height: 165px;
-    animation: goBack 30s infinite alternate;
+    .container--techs-list {
+      display: flex;
+      cursor: pointer;
+      gap: 2rem;
+      height: 165px;
+      animation: scroll 15s linear infinite;
+      padding: 0 0 0 1.5rem;
+    }
+    &:hover {
+      .container--techs-list {
+        animation-play-state: paused;
+      }
+    }
+  }
+  @keyframes scroll {
+    100% {
+      transform: translateX(0%);
+    }
+    0% {
+      transform: translateX(-100%);
+    }
   }
 
-  @keyframes goBack {
-    from {
-      transform: translateX(calc(-90%));
-    }
-    to {
-      transform: translateX(calc(0%));
-    }
+  .container--techs-item {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+    align-items: end;
+    margin: 0;
+    height: 165px;
   }
   .container--techs-name {
     font-size: 0.825rem;
@@ -54,9 +71,15 @@ export const StyledStartContainer = styled.section`
     text-align: center;
   }
   .container--techs-icom:hover .container--techs-name {
-    display: inline-block;
+    display: flex;
   }
 
+  .anchor--goDown {
+    margin: 0 auto;
+    background-color: transparent;
+    color: rgba(148, 163, 184, 1);
+    font-size: 32px;
+  }
   @media (min-width: 912px) {
     .container--start-title {
       margin: 0 auto;

@@ -25,7 +25,7 @@ const Home = () => {
     }
   };
   return (
-    <StyledHomeContainer>
+    <StyledHomeContainer id='#home'>
       <div className='container--header container--header-info'>
         <h1 className='container--header container--header-title'>
           I'm
