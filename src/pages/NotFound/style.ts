@@ -9,15 +9,29 @@ export const StyledNotFoundPage = styled.section`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     a {
       background-color: transparent;
       font-size: 1rem;
       font-family: 'Lexend';
       font-weight: 300;
+
       color: white;
       padding: 10px 30px;
       border: solid 2px white;
       border-radius: 30px;
+    }
+    .img--desktop {
+      display: none;
+    }
+
+    @media (min-width: 912px) {
+      .img--desktop {
+        display: flex;
+      }
+      .img--mobile {
+        display: none;
+      }
     }
   }
 `;
