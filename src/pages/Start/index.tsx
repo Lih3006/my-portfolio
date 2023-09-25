@@ -44,6 +44,18 @@ const Start = () => {
               );
             })}
           </ul>
+          <ul className='container--techs-list'>
+            {stackData.map((stack) => {
+              return (
+                <li className='container--techs-item' key={stack.title}>
+                  <div className='container--techs-icom'>
+                    <div className='container--techs-name'>{stack.title}</div>
+                    {<stack.reactIcon />}
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
         </div>
       </div>
       <a href='#home' className='anchor--goDown' onClick={handleClick}>
