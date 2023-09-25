@@ -3,7 +3,7 @@ export const userExperience = [
     id: 1,
     name: 'Career transition - Professional development',
     period: '17.11.2022 – 17.11.2023',
-    place: 'Full Stack Webentwicklung - Vollzeit - Kenzie Academy',
+    place: 'Full Stack Webentwicklung - fulltime - Kenzie Academy',
     country: 'Germany',
     description:
       'Ongoing experience in Fullstack course at Kenzie Academy, acquiring knowledge in areas such as object-oriented programming, web development, front-end and back-end, Javascript frameworks, and agile methodologies, among other relevant topics for building high-quality applications and systems.',

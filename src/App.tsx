@@ -4,14 +4,16 @@ import Background from '../src/components/background';
 import Experience from '../src/pages/Experience';
 import { GlobalStyles } from '../src/styles/global';
 import Footer from '../src/components/Footer';
-import Start from '../src/pages/Start';
+/* import Start from '../src/pages/Start'; */
 import ScrollPagesComponent from '../src/components/ScrollPagesComponent';
+import RoutesMain from './routes';
 
 function App() {
   return (
     <Background>
+      <RoutesMain />
       <GlobalStyles />
-      <Start />
+      {/* <Start /> */}
       <ScrollPagesComponent>
         <About />
         <Projects />
