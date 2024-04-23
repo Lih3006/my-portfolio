@@ -1,4 +1,4 @@
-import ProjectList from '../../components/ProjectsList';
+import ProjectList from '../../components/projectsList';
 import { StyledProjectContainer } from './style';
 
 const Projects = () => {

@@ -1,5 +1,5 @@
 import { StyledScrollPages } from './style';
-import Home from '../../pages/Home';
+import Home from '../../pages/home';
 import { ReactNode } from 'react';
 
 const ScrollPagesComponent = ({ children }: { children: ReactNode }) => {

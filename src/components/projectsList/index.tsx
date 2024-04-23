@@ -1,4 +1,5 @@
 import { userData } from '../../utils/userData';
+import {formatProjectName} from '../../utils/formattedName';
 import { api } from '../../services/api';
 import { useState, useEffect } from 'react';
 import { IProject } from '../../providers/projectProvider';
@@ -35,7 +36,7 @@ const ProjectList = () => {
     <StyledProjectListContainer>
       {repoList.map((project: IProject, index: number) => (
         <li key={project.id}>
-          <h2 className='container--project-list-title'>{project.name}</h2>
+          <h2 className='container--project-list-title'>{formatProjectName(project.name)}</h2>
           <p className='container--project-text'>{project.description}</p>
           <div className='container--project-links'>
             <a target='_blank' href={`${project.html_url}`}>
